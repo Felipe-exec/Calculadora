@@ -12,8 +12,6 @@ public class Calc
 	{
 		Number answer = number1.doubleValue() + number2.doubleValue();
 		
-		String formattedResult = String.format("%.0f + %.0f = %.0f", number1, number2, answer);
-		lastOps.add(formattedResult);
 		saveOp('+', number1, number2, answer);
 		
 		return answer;
@@ -23,8 +21,6 @@ public class Calc
 	{
 		Number answer = number1.doubleValue() - number2.doubleValue();
 		
-		String formattedResult = String.format("%.0f - %.0f = %.0f", number1, number2, answer);
-		lastOps.add(formattedResult);
 		saveOp('-', number1, number2, answer);
 		
 		return answer;
@@ -34,8 +30,6 @@ public class Calc
 	{
 		double answer = number1.doubleValue() * number2.doubleValue();
 		
-		String formattedResult = String.format("%.0f * %.0f = %.0f", number1, number2, answer);
-		lastOps.add(formattedResult);
 		saveOp('*', number1, number2, answer);
 		
 		return answer;
@@ -45,8 +39,6 @@ public class Calc
 	{
 		double answer = number1.doubleValue() / number2.doubleValue();
 		
-		String formattedResult = String.format("%.0f / %.0f = %.0f", number1, number2, answer);
-		lastOps.add(formattedResult);
 		saveOp('/', number1, number2, answer);
 		
 		return answer;
@@ -69,6 +61,6 @@ public class Calc
 		{
 			copyLastOps.add(op);
 		}
-		return lastOps;
+		return copyLastOps;
 	}
 }
