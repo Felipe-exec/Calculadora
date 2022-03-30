@@ -1,0 +1,3 @@
+# Calculadora
+Código em java para testar conhecimento.
+Estou com problemas em mostrar as operações no final...
