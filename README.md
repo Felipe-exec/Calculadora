@@ -1,0 +1,3 @@
+# Calculadora
+Praticando em java.
+Estou com problemas em mostrar as operações no final...
