@@ -7,6 +7,7 @@ public class Main
 	public static void main(String[] args) 
 	{
 		int choice = 0;
+		Calc calculator = new Calc(); //chamando a classe Calc
 		do
 		{
 			//recebendo variaveis e escaneando
@@ -31,7 +32,6 @@ public class Main
 			}
 			//-------------------------------------------
 			
-			Calc calculator = new Calc(); //chamando a classe Calc
 			switch(choice)
 			{
 			case 1:
@@ -60,17 +60,18 @@ public class Main
 				break;
 			case 5:
 				//sair----------------------------------------------------
-				List<String> ops = calculator.getLastOps();
-				System.out.println("Operações realizadas: ");
-				for (String op : ops) 
-				{
-					System.out.println(op);
-				}
+				System.out.println("------------------------------------");
+				read.close();
 				break;
 			}
-			
 			System.out.println("----------------------------------------");
 			System.out.println("----------------------------------------");
 		}while(choice != 5);
+		List<String> ops = calculator.getLastOps();
+		System.out.println("Operações realizadas: ");
+		for (String op : ops) 
+		{
+			System.out.println(op);
+		}
 	}
 }
