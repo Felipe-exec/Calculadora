@@ -1,3 +1,3 @@
 # Calculadora
-Código em java para testar conhecimento.
+Praticando em java.
 Estou com problemas em mostrar as operações no final...
