@@ -10,12 +10,8 @@ public class Main
 		do
 		{
 			//recebendo variaveis e escaneando
-			double n1, n2;
+			double n1 = 0, n2 = 0;
 			Scanner read = new Scanner(System.in);
-			System.out.print("Digite um valor: ");
-			n1 = read.nextDouble();
-			System.out.print("Digite outro valor: ");
-			n2 = read.nextDouble();
 			
 			//menu---------------------------------------
 			System.out.println("1 - Soma");
@@ -25,6 +21,14 @@ public class Main
 			System.out.println("5 - Sair");
 			System.out.print("Sua escolha: ");
 			choice = read.nextInt();
+			
+			if(choice != 5)
+			{
+				System.out.print("Digite um valor: ");
+				n1 = read.nextDouble();
+				System.out.print("Digite outro valor: ");
+				n2 = read.nextDouble();
+			}
 			//-------------------------------------------
 			
 			Calc calculator = new Calc(); //chamando a classe Calc
@@ -64,6 +68,7 @@ public class Main
 				}
 				break;
 			}
+			
 			System.out.println("----------------------------------------");
 			System.out.println("----------------------------------------");
 		}while(choice != 5);

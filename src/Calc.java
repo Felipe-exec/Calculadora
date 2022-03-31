@@ -44,6 +44,18 @@ public class Calc
 		return answer;
 	}
 	
+	public List<String> getLastOps()
+	{
+		List<String> copyLastOps = new ArrayList<String>();
+		
+		for (String op: lastOps)
+		{
+			copyLastOps.add(op);
+		}
+		
+		return copyLastOps;
+	}
+	
 	private void saveOp(char op, Number number1, Number number2, Number answer) 
 	{
 		String formattedResult = String.format("%.0f %s %.0f = %.0f", number1.doubleValue(), op, number2.doubleValue(), answer);
@@ -52,15 +64,4 @@ public class Calc
 		
 	}
 	
-	public List<String> getLastOps()
-	{
-		List<String> copyLastOps = new ArrayList<String>();
-		
-		
-		for (String op: lastOps)
-		{
-			copyLastOps.add(op);
-		}
-		return copyLastOps;
-	}
 }
